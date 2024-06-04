@@ -1,0 +1,26 @@
+<div class="abrir-modal animacion fadeIn">
+    <div class="modal" style="display: block;" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Carro de Compras</h5>
+          </div>
+          <div class="modal-body">
+            @if (items.length > 0) {
+              <app-cart
+              [items]="items"
+              [total]="total"
+              (idProductEventEmmiter)="onDeleteCart($event)"
+              />
+            }@else {
+              <div class="alert alert-warning">No hay elementos en el carro</div>
+            }
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="openCart()">Close</button>
+            <button type="button" class="btn btn-primary">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

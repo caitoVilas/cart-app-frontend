@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cart App</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active my-2" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link" (click)="openCart()" role="button"
+              >Cart ({{ items.length }})</a
+            > -->
+            <a class="nav-link position-relative my-2" (click)="openCart()" role="button" 
+              >Cart <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+              ({{ items.length }})</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
